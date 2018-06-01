@@ -1,0 +1,31 @@
+
+
+<div class="card  align-text-center">
+    <div class="row card-body">
+
+        <div class="col">
+            <div class="agendaContentCenter">
+                <div class="cursorPointer align-text-center weekDaysRowAlignment" *ngFor="let day of agenda.weekDays">
+                    <div class="agendaDayBox weekDayIterationSpacing" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="multiCollapseExample1 multiCollapseExample2" (click)="selectDay($event, day)">
+                        <span>{{day.dayName}}</span>
+                        <span>{{day.day}}</span>
+                    </div>
+
+
+                    <!-- <div *ngFor="let aptGroup of day.appointmentGroups"
+                         class="multiCollapseExample1 appointmentGroupBox weekDayIterationSpacing" [ngClass]="aptGroup.groupIsFull() ? 'fullAppointmentGroup' : 'freeAppointmentGroup'">
+                        <div class="row">
+                            {{aptGroup.formattedStartHour}}
+                        </div>
+                        <div class="row">
+                            {{aptGroup.formattedEndHour}}
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

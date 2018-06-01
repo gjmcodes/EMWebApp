@@ -1,0 +1,14 @@
+<div class="panel panel-default align-text-center">
+    <div class="row">
+        <div class="col">
+            <div class="appointmentTimeBox" *ngFor="let aptGroup of selectedDay.appointmentGroups">
+                <div class="appointmentTimeBox appointmentGroupBox weekDayIterationSpacing" [ngClass]="aptGroup.groupIsFull() ? 'fullAppointmentGroup'
+                : 'freeAppointmentGroup'" (click)="selectAppointment($event, aptGroup)">
+                    <span>{{aptGroup.formattedStartHour}}</span>
+                    <br />
+                    <span> {{aptGroup.formattedEndHour}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

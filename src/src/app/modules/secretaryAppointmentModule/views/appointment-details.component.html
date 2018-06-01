@@ -1,0 +1,56 @@
+<div class="col-md-12">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="col-md-12">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <label for="doctorName">Doctor</label>
+                    <input id="doctorName" placeholder="{{selectedDoctor.name}}" class="form-control" readonly /> 
+                </div>
+
+                <div class="col-md-4">
+                    <label for="doctorPractice">Practice</label>
+                    <input id="doctorPractice" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="appointmentday">Appointment Day</label>
+                    <input id="appointmentday" placeholder="{{selectedDay.dateString}}" class="form-control" readonly /> 
+                </div>
+
+                <div class="col-md-2">
+                    <label for="appointmentday">Start Hour</label>
+                    <input id="appointmentday" placeholder="{{selectedAppointmentGroup.formattedStartHour}}" class="form-control" readonly /> 
+                </div>
+
+                <div class="col-md-4">
+                    <label for="healthcarePlan">Healthcare Plan</label>
+                    <select id="healthcarePlan" class="form-control">
+                        <option>None</option>
+                        <option>Unimed</option>
+                        <option>Bradesco</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="patientName">Patient</label>
+                    <input id="patientName" class="form-control" />
+                </div>
+            </div>
+
+            <div class="float-right">
+                <button class="btn btn-success">
+                    <span>Confirm</span>
+                    <i class="fas fa-check-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

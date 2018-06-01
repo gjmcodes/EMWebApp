@@ -1,0 +1,64 @@
+<div class="col-md-12">
+    <div class="row">
+        <div id="doctorsAC">
+            <ngui-auto-complete class="form-control" id="test" (valueSelected)="addDoctor($event)" [accept-user-input]="true" [source]="doctors"
+                display-property-name="name" [list-formatter]="formattingDoctorList" blank-option-text="" loading-text="Google Is Thinking..."
+                 max-num-list="5" min-chars="3" no-match-found-text="No Match Found" placeholder="Enter doctor name..."></ngui-auto-complete>
+        </div>
+
+        <div class="wrapper" (click)="showAutocomplete=true">
+            <div *ngFor="let selDoctor of selectedDoctors" class="col-xs-18 col-sm-12 col-md-12 btn margin-top-bottom-5px" [style.backgroundColor]="selDoctor.color">
+                <span class="col-md-10">{{selDoctor.name}}</span>
+                <span class="fa fa-times removeTextColor col-xs-2 col-sm-2 col-md-2" (click)="removeSelectedDoctor(selDoctor.id)"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="card text-white bg-primary o-hidden h-100">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xs-18 col-sm-12 col-md-12">
+                    <div class="row col-xs-18 col-sm-12 col-md-12">
+                        <label class="margin-top-bottom-5px">
+                            <b>Doctors</b>
+                        </label>
+                    </div>
+                    <div class="row col-xs-18 col-sm-12 col-md-12">
+    
+                        <div id="doctorsAC">
+                            <ngui-auto-complete id="test" (valueSelected)="addDoctor($event)" [accept-user-input]="true" [source]="doctors" display-property-name="name"
+                                [list-formatter]="formattingDoctorList" blank-option-text="" loading-text="Google Is Thinking..."
+                                [loading-template]="loadingTemplate" max-num-list="5" min-chars="3" no-match-found-text="No Match Found"
+                                placeholder="Enter Name"></ngui-auto-complete>
+                        </div>
+    
+                        <div class="wrapper" (click)="showAutocomplete=true">
+                            <div *ngFor="let selDoctor of selectedDoctors" class="col-xs-18 col-sm-12 col-md-12 btn margin-top-bottom-5px" [style.backgroundColor]="selDoctor.color">
+                                <span class="col-md-10">{{selDoctor.name}}</span>
+                                <span class="glyphicon glyphicon-remove removeColor col-xs-2 col-sm-2 col-md-2" (click)="removeSelectedDoctor(selDoctor.id)"></span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-xs-18 col-sm-12 col-md-12">
+                    <div class="row col-xs-18 col-sm-12 col-md-12">
+                        <label class="margin-top-bottom-5px">
+                            <b>Practices</b>
+                        </label>
+                    </div>
+                    <div class="row col-md-12">
+                        <select id="selListDoctorPractices" class="col-xs-18 col-sm-12 col-md-12 margin-top-bottom-5px">
+                            <option *ngFor="let practice of practices" [value]="practice.id">{{practice.name}}</option>
+                        </select>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+    </div> -->

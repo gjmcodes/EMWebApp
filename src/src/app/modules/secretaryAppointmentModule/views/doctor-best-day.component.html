@@ -1,0 +1,29 @@
+<div id="doctorBestDayCard" style="display: none;" class="card align-text-center bg-primary">
+    <div class="row">
+        <div class="card-body">
+            <h4 class="text-white">Best Days</h4>
+            <div class="card-body-icon text-white">
+                <i class="fa fa-fw fas fa-calendar-check"></i>
+            </div>
+            <div class="col">
+                <div *ngFor="let aptGroup of suggestedAppointmentGroups" class="appointmentTimeBox">
+
+                    <div class=" appointmentGroupBox weekDayIterationSpacing freeAppointmentGroup">
+                        <span>
+                            <small>{{aptGroup.getAppointmentDay()}}</small>
+                        </span>
+                        <span>
+                            {{aptGroup.formattedStartHour}}
+                        </span>
+                        <br />
+                        <span>
+                            {{aptGroup.formattedEndHour}}
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

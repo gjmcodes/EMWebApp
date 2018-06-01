@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <secretary-appointment-filters></secretary-appointment-filters>
+    </div>
+
+    <div class="col-xl-6 col-sm-10 mb-6 hidden">
+       <doctor-best-day></doctor-best-day>
+    </div>
+</div>
+
+
+<ul class="nav nav-tabs" id="appointmentTabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="agenda-tab" data-toggle="tab" href="#agenda" role="tab" aria-controls="agenda" aria-selected="true">
+            <i class="fas fa-calendar-plus"></i>
+            <span>Agenda</span>
+        </a>
+    </li>
+    <li class="nav-item" *ngIf="selectedDay.dayName != undefined">
+        <a class="nav-link" id="selected-day-tab" data-toggle="tab" href="#selectedDay" role="tab" aria-controls="selectedDay" aria-selected="false">
+            <i class="fas fa-calendar-alt"></i>
+            <span>{{selectedDay.dateString}}</span>
+        </a>
+    </li>
+    <li>
+        <a class="nav-link" id="patient-form-tab" data-toggle="tab" href="#patientForm" role="tab" aria-controls="patientForm" aria-selected="false">
+            <i class="fab fa-wpforms"></i>
+            <span>Patient</span>
+        </a>
+    </li>
+    <li>
+        <a class="nav-link" id="appointment-details-tab" data-toggle="tab" href="#appointment-details" role="tab" aria-controls="appointment-details"
+            aria-selected="false">
+            <i class="fas fa-check"></i>
+            <span>Confirmation</span>
+        </a>
+    </li>
+</ul>
+
+<!-- Tabs -->
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="agenda" role="tabpanel" aria-labelledby="agenda-tab">
+        <secretary-agenda></secretary-agenda>
+    </div>
+    <div *ngIf="selectedDay.dayName != undefined" class="tab-pane fade" id="selectedDay" role="tabpanel" aria-labelledby="selected-day-tab">
+        <selected-day></selected-day>
+    </div>
+    <div class="tab-pane fade" id="patientForm" role="tabpanel" aria-labelledby="patient-form-tab">
+        <patient-form></patient-form>
+    </div>
+    <div class="tab-pane fade" id="appointment-details" role="tabpanel" aria-labelledby="appointment-details-tab">
+        <appointment-details></appointment-details>
+    </div>
+</div>

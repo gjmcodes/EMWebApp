@@ -1,0 +1,51 @@
+
+.agendaDayBox{
+    background-color: #8080e6;
+    color: white;
+    font-style: normal;
+    margin-bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    padding: 15px;
+    border-top-left-radius: 25%;
+}
+
+.agendaContentCenter{
+    margin: 0 auto;
+    width: 80%
+}
+
+.weekDaysRowAlignment{
+    float: left;
+    margin : 5px;
+    width: 90px;
+}
+
+.appointmentGroupBox{
+    border-style: dashed;
+    width:100%;
+    font-weight: bold;
+}
+
+.freeAppointmentGroup{
+    background-color: green;
+    border-color: #0d960d;
+}
+
+.fullAppointmentGroup{
+    border-color: #abbdab;
+}
+
+
+.weekDayIterationSpacing{
+    margin: 0px;
+}
+
+.appointmentTimeBox{
+    width: 90px;
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
